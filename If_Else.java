@@ -2,7 +2,7 @@ import java.util.*;
 
 public class If_Else {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
       //if,else
       //   int a = sc.nextInt();
@@ -41,6 +41,7 @@ public class If_Else {
 
       //switch
       int button = sc.nextInt();
+      sc.close();
       switch(button){
 
       case 1:System.out.println("hello");

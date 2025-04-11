@@ -9,7 +9,7 @@ public class Max_of_3 {
     int b = sc.nextInt();
     System.out.println("Input 3rd no:");
     int c = sc.nextInt();
-
+    sc.close();
     if(a>b && a>c){
         System.out.println("a is greater than b and c");
     }
