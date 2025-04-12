@@ -8,10 +8,10 @@ public class Divisibility_by_5_11 {
         sc.close();
 
         if(x%5==0 && x%11==0){
-            System.out.println("The number is divisible by 5 and 11");
+            System.out.println(x+" is divisible by 5 and 11");
         }
         else{
-            System.out.println("The number is not divisible by 5 and 11");
+            System.out.println(x+" is not divisible by 5 and 11");
         }
     }
     

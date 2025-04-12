@@ -7,8 +7,18 @@ public class Sum_Natural_nos {
         int n = sc.nextInt();
         sc.close();
         int sum=0;
-        for(int i=0;i<=n;i++){
+        
+        //using for loop
+        // for(int i=0;i<=n;i++){
+        //     sum=sum+i;
+        // }
+       
+        //using while loop
+        int i=0;
+        while(i<=n){
             sum=sum+i;
+            i++;
+
         }
         System.out.println("sum:"+sum);
     }

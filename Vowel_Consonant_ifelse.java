@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Vowel_Consonant {
+public class Vowel_Consonant_ifelse {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
