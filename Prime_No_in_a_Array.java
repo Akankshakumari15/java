@@ -15,17 +15,25 @@ public class Prime_No_in_a_Array {
         }
          sc.close();
 
-        int  count=0;
-         for(int i=0;i<size;i++){
-            for(int j=0;j<=10;j++)
-            {
-                if(arr[i]%j==0)
-                   count++;
-            }
-            if(count<2)
-            System.out.println(arr[i]+"prime nos");
 
-int i=9;
+         System.out.println("Prime nos in the array:");
+         for(int i=0;i<size;i++){
+            int num= arr[i];
+            if(num>1){
+                boolean isPrime =true;
+                for(int j=2;j<=Math.sqrt(num);j++){
+                    if (num%j==0){
+                        isPrime=false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    System.out.println(num+" ");
+                }
+            }
+         }
+
+
          }
     }
-}
+
