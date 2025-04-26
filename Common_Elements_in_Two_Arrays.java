@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Compare_two_Arrays {
+public class Common_Elements_in_Two_Arrays {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of first array:");
@@ -29,21 +29,15 @@ public class Compare_two_Arrays {
 
            sc.close();
 
-    boolean areEqual = true;
-        for (int i = 0; i < size1; i++) {
-            if (arr1[i] != arr2[i]) {
-                areEqual = false;
-                break;
+
+           System.out.println("Common elements:");
+           for(int k=0;k<size1;k++){
+            for(int i=0;i<size2;i++){
+                if(arr1[k]==arr2[i]){
+                    System.out.println(arr1[k]+ " ");
+                    break;
+                }
             }
-        }
-
-        if (areEqual) {
-            System.out.println("Arrays are equal.");
-        } else {
-            System.out.println("Arrays are not equal.");
-        }
+           }
     }
-
-    
 }
-
