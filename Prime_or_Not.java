@@ -3,22 +3,30 @@ import java.util.Scanner;
 public class Prime_or_Not {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter  a no:");
         int x = sc.nextInt();
         sc.close();
 
-        int i;
-        for ( i=2;i<=x/2;i++){
+        boolean isPrime=true;
+    System.out.println("Prime or not: ");
+    if(x<2){
+        isPrime=false;
+    }
+    else{
+        for(int i=2;i*i<=x;i++){
             if(x%i==0){
-                System.out.println(x+" is not a prime number");
-            break;
+                isPrime=false;
+                break;
+                
+            }
+
         }
     }
-    if(i>x/2 && x>1){
-        System.out.println(x+" is a prime number");
+    if(isPrime){
+        System.out.println("Yes");
     }
-    else if(x<=1){
-        System.out.println(x+" is not a prime number");
-
+    else{
+        System.out.println("No");
     }
     }
 }
