@@ -9,23 +9,25 @@ public class Circle {
         } else {
             System.out.println("Radius must be positive.");
         }
-    }
+    }    
+        
     
-
     public double area_of_circle() {
-        return Math.PI*radius*radius;
-    }
-
+            return Math.PI*radius*radius;
+        }
+    
+       
     public double perimeter_of_circle() {
-        return 2*Math.PI*radius;
-    }
+            return 2*Math.PI*radius;
+        }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Circle circle = new Circle();
 
         System.out.print("Enter radius of circle: ");
-        double radius = sc.nextInt();
+        double radius = sc.nextDouble();
 
 
         sc.close();
@@ -35,8 +37,9 @@ public class Circle {
         double area = circle.area_of_circle();
         double perimeter = circle.perimeter_of_circle();
 
-        System.out.printf("Area of Circle: %.2f\n",+ area);
-        System.out.printf("Perimeter of Circle: %.2f\n",+ perimeter);
+        System.out.printf("Area of Circle: %.2f%n", area);
+        System.out.printf("Perimeter of Circle: %.2f%n",perimeter);
+
     }
 }
 
