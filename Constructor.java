@@ -1,27 +1,28 @@
-class hello{
-     String name = "raj";
-    //default constructor
-    hello(){
+class Hello {
+    String name = "raj";
+
+    // Default constructor
+    Hello() {
         System.out.println("hello");
     }
 
-     //parametrized constructor
-     hello(a){
-    //     System.out.println("bye");
-    name 
-     }
-    void hi(){
+    // Parameterized constructor
+    Hello(String name) {
+        this.name = name;
+        System.out.println("Name set to: " + this.name);
+    }
+
+    void hi() {
         System.out.println("hi");
     }
 }
 
-
 public class Constructor {
     public static void main(String[] args) {
-        hello obj = new hello();
-        // hello obj1 = new hello(a);
-        obj.hi();
-        
+        Hello obj = new Hello();               // Calls default constructor
+        obj.hi();                              // Calls method
+
+        Hello obj1 = new Hello("Amit");        // Calls parameterized constructor
+        obj1.hi();                             // Also works on second object
     }
-    
 }
