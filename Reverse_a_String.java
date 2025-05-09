@@ -6,7 +6,7 @@ public class Reverse_a_String {
         
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter string:");
-        String str = sc.next();
+        String str = sc.nextLine();
         int n=str.length();
         
         String rev="";
@@ -18,4 +18,5 @@ public class Reverse_a_String {
             }
         System.out.println(""+rev);
 
-}}
+}
+}
