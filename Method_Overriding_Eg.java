@@ -11,9 +11,12 @@ class child extends parent{
     }
 }
 
-public class Method_Overriding {
+public class Method_Overriding_Eg {
     public static void main(String[] args) {
-        parent obj = new child();
+    parent Parent = new parent();
+        child obj = new child();
         obj.work();
-    }
+        Parent.work();
+    
+}
 }
