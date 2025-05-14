@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class To_Find_Kth_Maximum_Minimum_Element {
+public class To_Find_First_Three_Maximum_Element_in_Array {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of array:");
