@@ -35,7 +35,7 @@ public class SubArrayWithTargetSum {
             return;
            } 
         }
-        System.out.println("Np subarray found with the target sum.");
+        System.out.println("No subarray found with the target sum.");
      }
 }
 
