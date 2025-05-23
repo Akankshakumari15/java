@@ -19,7 +19,7 @@ public class Kadanes_algorithm {
             }      
             System.out.println(sum);    
         }
-        
+    }
        
         
     }
