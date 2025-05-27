@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Collection_Framework {
+public class Collection_Framework_ArrayList {
     public static void main(String[] args) {
         //EX 1
-    ArrayList<String> arr = new ArrayList<>();
+    ArrayList <String> arr = new ArrayList<>();
         System.out.println("String array: ");
         //to add/assign elements into the array.
          arr.add("akanksha");
