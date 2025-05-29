@@ -25,11 +25,7 @@ public class HashMap_collection {
 
         }
     });
-        
-        
-        
-
-        }
-    }
+  }
+}
 
 
