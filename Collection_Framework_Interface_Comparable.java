@@ -1,5 +1,8 @@
+//is sorting by age
+
 import java.util.ArrayList;
 import java.util.Collections;
+
 
 class Student implements Comparable<Student> {
     int age;
@@ -20,7 +23,7 @@ class Student implements Comparable<Student> {
     }
 }
 
-public class Collection_Framework {
+public class Collection_Framework_Interface_Comparable {
     public static void main(String[] args) {
         ArrayList<Student> list1 = new ArrayList<>();
         list1.add(new Student(12, "rahul"));
