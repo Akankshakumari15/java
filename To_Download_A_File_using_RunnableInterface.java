@@ -11,7 +11,6 @@ class DownloadFile implements Runnable{
      try {
         Thread.sleep(2000);
      } catch (Exception e) {
-        // TODO: handle exception
      }
      System.out.println("Downloading completed!");
     }
@@ -29,7 +28,6 @@ public class To_Download_A_File_using_RunnableInterface {
             d1.join();
             d2.join();
         } catch (Exception e) {
-            // TODO: handle exception
         }
         System.out.println("Hello, my name is akuu.");
     }

@@ -1,4 +1,4 @@
-//asynchronous behaviour of running a codemis more time optisized.
+//asynchronous behaviour of running a code is more time optisized.
 //multithreading also works in an asynchromous behaviour.
 //here we have two threads i.e main(byDefault) and myThread(userMade).
 //In any case, first the main thread will execute itself and then the userMade thread. 
@@ -13,7 +13,6 @@ class myThread extends Thread{
       try {
         Thread.sleep(2000);
       } catch (Exception e) {
-        // TODO: handle exception
       }
       System.out.println("byee");
       }

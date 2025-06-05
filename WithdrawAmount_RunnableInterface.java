@@ -1,42 +1,38 @@
-class amount implements Runnable{
+class amount implements Runnable {
     int withdrawalAmount;
-    static int balance=1000;
+    static int balance = 1000;
+    //constructor
+    public amount(int withdrawalAmount) {
+        this.withdrawalAmount = withdrawalAmount;
+    }
 
-    public  amount(int withdrawalAmount){
-        this.withdrawalAmount=withdrawalAmount;
-    }
-  public void run(){
-  
-    if(balance<withdrawalAmount){
-        System.out.println("Insufficient amount balance");
-    }
-    else{
-        balance=balance-withdrawalAmount;
-        System.out.println("Amount "+withdrawalAmount+" has been withdrawn.");
-        try {
-            Thread.sleep(2000);
-        } catch (Exception e) {
-            // TODO: handle exception
+    public void run() {
+     synchronized (amount.class) {
+        if (balance < withdrawalAmount) {
+            System.out.println(Thread.currentThread().getName() + ": Insufficient balance");
+        } else {
+            System.out.println(Thread.currentThread().getName() + ": Processing withdrawal...");
+            try {
+                Thread.sleep(2000); 
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            balance = balance - withdrawalAmount;
+            System.out.println(Thread.currentThread().getName() + ": Withdrawal of " + withdrawalAmount + " successful. Remaining balance: " + balance);
         }
     }
-    System.out.println("Present bank balance :"+balance);
+  }
 }
-}
+
 public class WithdrawAmount_RunnableInterface {
-    
     public static void main(String[] args) {
-        amount obj = new amount(800);
-        Thread d1 = new Thread(obj);
-        amount obj1 = new amount(500);
-        Thread d2 = new Thread(obj1);
+        amount obj1 = new amount(800);
+        amount obj2 = new amount(500);
+
+        Thread d1 = new Thread(obj1, "Thread-1");
+        Thread d2 = new Thread(obj2, "Thread-2");
+
         d1.start();
-        try {
-            d1.join();
-        } catch (InterruptedException e) {
-            // TODO: handle exception
-            e.printStackTrace();
-        }
         d2.start();
-        
     }
 }
