@@ -41,7 +41,7 @@ public class Lambda_expression {
 
 
      //EX 3 -> multiply 5 to all even numbers
-        List<Integer> list = Arrays.asList(0, 10, 2, 3, 5, 4, 3);
+        List<Integer> list = Arrays.asList(5,10,15,20,25);
 
         List<Integer> evenList = list.stream()
                                      .filter(n -> n % 2 == 0) // Keep only even numbers
@@ -52,7 +52,7 @@ public class Lambda_expression {
        
     //EX 4 -> sum of all integers of the list
     int sum=list.stream()
-                .reduce(0,(a,b)->a+b);
+                .reduce(10,(a,b)->a+b);//a=0,b=5
                                 
     System.out.println(sum);                            
 
